@@ -5,17 +5,17 @@ import static sorting.quickSort.quicksort;
 import static sorting.selectionSort.selectionsort;
 import static sorting.insertionSort.insertionsort;
 import static sorting.bubbleSort.bubblesort;
-
+import static sorting.mergeSort.mergeSort;
 public class Sorting {
     
     
     
     static void print(int a[]){
-        System.out.println("\n starting to print");
+        //System.out.println("\n starting to print");
         for(int i=0;i<a.length;i++){
             System.out.print(""+a[i]+" ");
         }
-        System.out.println("");
+        //System.out.println("");
     }
     
     static int[] generateRandomArray(int size){
@@ -54,13 +54,13 @@ public class Sorting {
         int a2[]=new int[size];
         int a3[]=new int[size];
         int a4[]=new int[size];
-        
+        int a5[]=new int[size];
         
         System.arraycopy(a, 0, a1, 0, a.length);
         System.arraycopy(a, 0, a2, 0, a.length);
         System.arraycopy(a, 0, a3, 0, a.length);
         System.arraycopy(a, 0, a4, 0, a.length);
-        
+        System.arraycopy(a, 0, a5, 0, a.length);
         
         System.out.println("\n Sorting Algos");
         
@@ -89,6 +89,12 @@ public class Sorting {
         long stopTimeBubble = System.nanoTime();
         System.out.printf("The running time of bubble sort    is %-8d \n", (stopTimeBubble - startTimeBubble));
         //print(a4);
+        
+        long startTimeMerge = System.nanoTime();
+        a5=mergeSort(a5);
+        long stopTimeMerge = System.nanoTime();
+        System.out.printf("The running time of merge  sort    is %-8d \n", (stopTimeMerge - startTimeMerge));
+        //print(a5);
     }
     
 }

@@ -23,17 +23,19 @@ class mergeSort{
                 ptr_q++;
                 ptr_c++;
             }
-            //if l_a < l_b then copy the remaining array b to c
-            if(ptr_p+1>l_a){
-                for(int i = 0;i<(l_b-ptr_q);i++){
-                    combined[ptr_c+i]=b[ptr_q+i];
-                }
+            
+        }
+        
+        //if l_a < l_b then copy the remaining array b to c
+        if(ptr_p>=l_a){
+            for(int i = 0;i<(l_b-ptr_q);i++){
+                combined[ptr_c+i]=b[ptr_q+i];
             }
-            //if l_a < l_b then copy the remaining array a to c
-            if(ptr_q+1>l_b){
-                for (int i = 0;i<(l_a-ptr_p); i++) {
-                    combined[ptr_c+i]=a[ptr_p+i];
-                }
+        }
+        //if l_a < l_b then copy the remaining array a to c
+        if(ptr_q>=l_b){
+            for (int i = 0;i<(l_a-ptr_p); i++) {
+                combined[ptr_c+i]=a[ptr_p+i];
             }
         }
         
@@ -62,8 +64,9 @@ class mergeSort{
             right[i]=arr[i+mid];
         }
         
-        mergeSort(left);
-        mergeSort(right);
+        left=mergeSort(left);
+        right=mergeSort(right);
+        
         //merge the two subarrays
         int mergedArr[] = merge(left,right);
         return mergedArr;
