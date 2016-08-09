@@ -1,7 +1,23 @@
 package sorting;
 
 import static sorting.Sorting.print;
+/*
+Bubble Sort 
+    Tiny code size
+    ability to detect that the list is sorted efficiently is built into the algorithm.
+    Not optimal
 
+    Stable(does not change the relative order of elements with equal keys) : Yes
+    Online(can sort as it recieves input) : No
+    Adaptable(faster for already sorted data) : Yes
+    Inplace (doesnt require additional space) : Yes
+
+Analysis
+    Worst Case Running Time : O(N^2)
+    Best Case Running Time : O(N) Already sorted list
+    Space Complexity : O(1)
+
+*/
 class bubbleSort {
     static void bubblesort(int a[]){
         boolean swappedElement = false;

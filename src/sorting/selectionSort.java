@@ -1,5 +1,19 @@
 package sorting;
+/*
+Selection Sort 
+    Less swaps O(N)
 
+    Stable(does not change the relative order of elements with equal keys) : No
+    Online(can sort as it recieves input) : No
+    Adaptable(faster for already sorted data) : No
+    Inplace (doesnt require additional space) : Yes
+
+Analysis
+    Worst Case Running Time : O(N^2)
+    Best Case Running Time : O(N^2)
+    Space Complexity : O(1)
+
+*/
 public class selectionSort {
     
     static int min(int a[],int start,int end){

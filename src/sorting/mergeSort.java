@@ -1,5 +1,21 @@
 package sorting;
 import java.util.Scanner;
+/*
+Merge Sort 
+    Based on devide and Conquer
+    Less number of compares
+
+    Stable(does not change the relative order of elements with equal keys) : Yes
+    Online(can sort as it recieves input) : No
+    Adaptable(faster for already sorted data) : No
+    Inplace (doesnt require additional space) : No
+
+Analysis
+    Worst Case Running Time : O(NLogN) when the list is reverse sorted
+    Best Case Running Time : O(NLogN) Already sorted list
+    Space Complexity : O(N) auxilary space(left and right arrays)
+
+*/
 class mergeSort{
     
     static int[] merge(int a[],int b[]){
